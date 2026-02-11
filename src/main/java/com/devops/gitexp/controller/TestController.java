@@ -21,4 +21,9 @@ public class TestController {
         return "test";
     }
 
+    @PostMapping("/post/{message}")
+    public String poster(@PathVariable String message){
+        return message;
+    }
+
 }
