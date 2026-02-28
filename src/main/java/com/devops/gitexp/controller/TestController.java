@@ -1,6 +1,9 @@
 package com.devops.gitexp.controller;
 
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 @RestController
 @RequestMapping("/api/")
@@ -28,5 +31,13 @@ public class TestController {
     public String poster(@PathVariable String message){
         return message+"posted";
     }
+
+    @PostMapping("/path")
+    public String postMethodName(@RequestBody String entity) {
+        //TODO: process POST request
+        
+        return entity;
+    }
+    
 
 }
